@@ -11,11 +11,11 @@ In a different window, log onto the [Rstudio server](http://blnx1.emory.edu:8787
 
     setwd("./Feb25_2016")
 
-### Look at the files _SR-qualplot.R_  through Rstudio
+### Look at the files _SR-qualplot.R_ and shortread_tutorial.Rmd through Rstudio
 
 This file creates a plot of the quality scres for each cycle in the FASTQ file at the path "/home/Shared/IBS574/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq".  We will go through this step-by-step to understand how the script works.
 
-### Run scriptshortread_tutorial.Rmd 
+### Run the script shortread_tutorial.Rmd 
 
 Open the plot "q-graph.pdf" using the RStudio Files section.
 
