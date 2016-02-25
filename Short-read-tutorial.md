@@ -1,14 +1,17 @@
-This practical is about visualizing FASTQ quality, running R scripts thrugh the command line and automating execution with make.
+This practical is about visualizing FASTQ quality, running R scripts through the command line and automating execution with make.
 
 ### Preliminaries
 
-* Log into blnx!@emory.edu thrugh ssh
+Log into blnx!@emory.edu thrugh ssh.  Then clone the material and cd int the directory
 
-* Create a new flder in your home area and clone the github repo containing the class
+    git clone https://github.com/IBS574/Feb25_2016.git
+    cd Feb25_2016
 
-* In a different window, log onto the Rstudio server on blnx1 thrugh a web browser [](http://blnx1.emory.edu:8787)
+In a different window, log onto the [Rstudio server](http://blnx1.emory.edu:8787) on blnx1 thrugh a web browser. Open up the "Feb25_2016" folder in your RStudio files panel.  Set the working directory like this ..
 
-### Look at the files _SR-qualplot.R_ and _shortread_tutorial.Rmd_  through Rstudio
+    setwd("./Feb25_2016")
+
+### Look at the files _SR-qualplot.R_  through Rstudio
 
 This file creates a plot of the quality scres for each cycle in the FASTQ file at the path "/home/Shared/IBS574/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq".  We will go through this step-by-step to understand how the script works.
 
