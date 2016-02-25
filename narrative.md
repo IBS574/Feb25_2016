@@ -86,7 +86,7 @@ How does the quality of the reverse read compare to the forward?
 
 This could be achieved in one of two ways:  
 
-* Modify the _SR-qualplot.R_ script to create a loop inside.  Yu will need to look at the _list.files_ function and be careful that you only run FASTQ files.  Yu also need to think about giving different names to every file that is outputted.
+* Modify the _SR-qualplot.R_ script to create a loop inside.  You will need to look at the _list.files_ function and be careful that you only run FASTQ files.  You also need to think about giving different names to every output file.
 
 * (Harder, but few lines of code). Modify the Makefile using make wildcards.  You will need to check the make manual or online blogs and tutorials.
 
