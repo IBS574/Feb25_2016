@@ -25,7 +25,9 @@ Make sure you understand what the plot is showing.  Is this a high quality FASTQ
 
 (SR-qualplot.R is essentially the same pipeline as scriptshortread_tutorial.Rmd but takes arguments on the command line)
 
-First, make a new folder to store the utput of the analysis and cd into it.
+First, delete the older versin of the picture 
+
+    rm q-graph.pdf
 
 Now look at the folder /home/Shared/IBS574/MiSeq_SOP/.  You can see it contains a bunch of fastq files (as well as some ther files we are nt interested in).
 
@@ -39,7 +41,7 @@ Make sure you understand what just happened!
 
 ### Automate a pipeline with _make_
 
-Create a file call _Makefile_ in your working directry. ( You can use emacs or the RStudio new_file>text dialog).
+Create a file called _Makefile_ in your working directry. ( You can use emacs or the RStudio new_file>text dialog).
 
 In the Makefile insert the text as below
 
