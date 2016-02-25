@@ -1,0 +1,37 @@
+---
+title: "Shortread tutorial"
+author: "Tim Read"
+date: "February 8, 2016"
+output: html_document
+---
+
+Objectives
+- Learn abut Bioconductor ShortRead package
+- Learn abut FASTQ quality score analysis
+- Make a R script that can be run from the UNIX command line
+- Understand hw to pas arguments to an R script
+
+```{r}
+library("ShortRead")
+#arg <- commandArgs(trailingOnly=TRUE)
+arg <- "/home/Shared/IBS574/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq"
+#make sure that exactly arg is entered
+if (length(arg) > 1){
+  stop('Stop: More than one file entered')
+}
+if (length(arg)== 0){
+  stop('Stop: n files entered')
+}
+```
+
+```{r make quality data.frame}
+qqF <- qa(arg) #quality assessment
+qqf.pc.qual <- qqF[["perCycle"]]$quality
+```
+
+```{r create graphics device and output to file}
+pdf("q-graph.pdf")
+print(ShortRead:::.plotCycleQuality(qqf.pc.qual))
+dev.off()
+```
+
