@@ -2,7 +2,7 @@ This practical is about visualizing FASTQ quality, running R scripts through the
 
 ### Preliminaries
 
-Log into blnx!@emory.edu thrugh ssh.  Then clone the material and cd int the directory
+Log into blnx1@emory.edu thrugh ssh.  Then clone the material and cd into the directory
 
     git clone https://github.com/IBS574/Feb25_2016.git
     cd Feb25_2016
@@ -25,7 +25,7 @@ Make sure you understand what the plot is showing.  Is this a high quality FASTQ
 
 (SR-qualplot.R is essentially the same pipeline as scriptshortread_tutorial.Rmd but takes arguments on the command line)
 
-First, delete the older versin of the picture 
+First, delete the older version of the picture 
 
     rm q-graph.pdf
 
@@ -51,7 +51,7 @@ In the Makefile insert the text as below
         
 It is important that the second and third line start with tabs.
 
-On the first line of the  Makefile is defining the creation of the target file "F3D0_S188_L001_R1_001.pdf".  The file on the right of the colon, "/home/Shared/IBS574/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq" is called a prerequisite.  This file is needed fr the formula.
+On the first line the  Makefile is defining the creation of the target file "F3D0_S188_L001_R1_001.pdf".  The file on the right of the colon, "/home/Shared/IBS574/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq" is called a *prerequisite*.  The prerequisite file is needed to create the target.  More on make in this [primer](http://swcarpentry.github.io/make-novice/).
 
 To get a preview of using make type
 
@@ -80,14 +80,14 @@ You will need to create a new master rule called 'all' at the top to run your ot
 
 Execute your pipeline using make.
 
-How does the quality of the reverse read look?
+How does the quality of the reverse read compare to the forward?
 
 ### Homework:  Look at the GNU make blogs and tutorals and find an elegant way to run *all* the FASTQ files in the MiSeq_SP folder (or indeed any FASTQ files in a given folder).
 
-This could be achieved in one of two ways.  
+This could be achieved in one of two ways:  
 
-* Modify the _SR-qualplot.R_ script to create a loop inside.  Yu will need to look at the _list.files_ function and be careful that you only run FASTQ files.  Yu also need to think about giving different names to every file that is outputted.
+* Modify the _SR-qualplot.R_ script to create a loop inside.  You will need to look at the _list.files_ function and be careful that you only run FASTQ files.  You also need to think about giving different names to every output file.
 
-* (Harder, but shorter). Mdify the Makefile using make wildcards.  You will need t chekc the make manual or online blgs and tutorials.
+* (Harder, but few lines of code). Modify the Makefile using make wildcards.  You will need to check the make manual or online blogs and tutorials.
 
 Due next wednesday.
