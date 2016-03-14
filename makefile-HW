@@ -1,0 +1,13 @@
+SRCFILES = $(wildcard /home/Shared/IBS574/MiSeq_SOP/*.fastq)
+OUTFILES = $(SRCFILES:/home/Shared/IBS574/MiSeq_SOP/%.fastq=/home/mpincu2/%.pdf)
+
+.PHONY: all
+
+all: $(OUTFILES)
+
+%.pdf: /home/Shared/IBS574/MiSeq_SP/%.fastq
+	Rscript --vanilla ./SR-qualplot.R $^
+	mv q-graph.pdf $@
+
+        
+       
